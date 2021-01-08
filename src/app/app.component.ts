@@ -5,6 +5,7 @@ import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { Deeplinks } from "@ionic-native/deeplinks/ngx";
 import { Router } from "@angular/router";
+import { ExampleDeepLinkPage } from "./example-deep-link/example-deep-link.page";
 
 @Component({
   selector: "app-root",
@@ -32,7 +33,7 @@ export class AppComponent {
   }
   setDeepLink() {
     this.Deeplinks.route({
-      "/": {},
+      "/hello": ExampleDeepLinkPage,
     }).subscribe(
       (res) => {
         this.response = res;

@@ -11,6 +11,11 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'hello',
+    loadChildren: () => import('./example-deep-link/example-deep-link.module').then( m => m.ExampleDeepLinkPageModule)
+  },
+
 ];
 
 @NgModule({

@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Deeplinks } from '@ionic-native/deeplinks/ngx';
+import { Instagram } from '@ionic-native/instagram/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -16,7 +17,7 @@ import { Deeplinks } from '@ionic-native/deeplinks/ngx';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },Deeplinks
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },Deeplinks,Instagram
   ],
   bootstrap: [AppComponent]
 })

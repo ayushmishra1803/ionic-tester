@@ -33,15 +33,17 @@ export class AppComponent {
   }
   setDeepLink() {
     this.Deeplinks.route({
-      "/hello": ExampleDeepLinkPage,
+      "/":'' 
     }).subscribe(
       (res) => {
         this.response = res;
+        alert('success')
         alert(JSON.stringify(res));
 
         this.response = res;
       },
       (err) => {
+        alert('fail')
         this.response = err;
         alert(JSON.stringify(err));
         console.log(err.toString());
